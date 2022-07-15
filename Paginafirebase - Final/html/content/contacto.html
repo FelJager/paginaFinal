@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constacto | ALTAPAYA</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styleinterno.css">
+</head>
+<body >
+    <div class="logo">
+        <div class="circle"></div>
+        <h2>ALTAPAYA<span class="fullstop">.</span></h2>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/html/content/index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/content/quiensomos.html">Quienes Somos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/content/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modallogout" id="logout">Log Out</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Salir Cuenta -->
+    <div class="modal fade" id="modallogout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Quieres salir?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger">Salir</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section class="section abs-center">
+
+            <!--Section heading-->
+            <h2 class="section-heading h1 pt-4">Contactese Con Nosotros</h2>
+            <!--Section description-->
+            <p class="section-description">Si quiere comunicarse con el encargado de la página, proceda a enviar su motivo por este formulario</p>
+
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-8 col-xl-9">
+                    <form id ="contact-form" name="contact-form" action="/php/conexion.php" method="POST"  onsubmit="return validateForm()" >
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <div class="md-form">
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <label for="name" class="">Nombre Completo</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <div class="md-form">
+                                        <input type="text" id="email" name="email" class="form-control">
+                                        <label for="email" class="">Correo Electronico</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" class="">Mensaje</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" class="md-textarea"></textarea>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                    </form>
+
+                    <div class="center-on-small-only">
+                        <a class="btn btn-primary" onclick="validateForm()">Enviar</a>
+                    </div> <div class="status" id="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 col-xl-3">
+                    <ul class="contact-icons">
+
+                        <li><i class="fa fa-phone fa-2x"></i>
+                            <p>+ 54 948 256 321</p>
+                        </li>
+
+                        <li><i class="fa fa-envelope fa-2x"></i>
+                            <p>contact@mdbootstrap.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+            </div>
+
+        </section>
+        <!--Section: Contact v.2-->
+
+
+
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <!--Custom scripts-->
+    <script>
+
+function validateForm() {
+        var x =  document.getElementById('name').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Name cannot be empty";
+            return false;
+        }
+        x =  document.getElementById('email').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Email cannot be empty";
+            return false;
+        } else {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!re.test(x)){
+                document.getElementById('status').innerHTML = "Email format invalid";
+                return false;
+            }
+        }
+        x =  document.getElementById('subject').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Subject cannot be empty";
+            return false;
+        }
+        x =  document.getElementById('message').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Message cannot be empty";
+            return false;
+        }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+
+}
+    </script>
+    
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+<footer class="py-3 table-dark fixed-bottom" style="background-color: #000000;">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a class="nav-link px-2 text-muted">Fernando Reinoso Revilla</a></li>
+
+        <a class="btn btn-social-icon btn-facebook" href="https://web.facebook.com/fernando.reinosorevilla.35/">
+            <span class="fa fa-facebook"></span>
+        </a>
+
+        <a class="btn btn-social-icon btn-linkedin" href="https://web.facebook.com/fernando.reinosorevilla.35/">
+            <span class="fa fa-linkedin"></span>
+        </a>
+    </ul>
+    <p class="text-center text-muted">© 2022 ALTAPAYA, Inc</p>
+</footer>
+</html>

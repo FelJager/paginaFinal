@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ALTAPAYA</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo">
+            <div class="circle"></div>
+            <h2>ALTAPAYA<span class="fullstop">.</span></h2>
+        </div>
+    </nav>
+    <section class="container">
+        <div id="signin" class="form-container">
+            <div class="section-header">
+            <p class="secondary-text">Bienvenido</p>
+            <h1 class="primary-heading">
+                Logueate<span class="fullstop">.</span>
+            </h1>
+            <h2 class="secondary-heading">
+                No tienes cuenta?<a class="login-link" href="/html/nuevacuenta.html">Inscribete Aqui</a>
+            </h2>
+            </div>
+            <form action="javascript:void(0);" class="form">
+            <div class="form-input">
+                <div class="name-input">
+                    <input type="text" name="email" id="email" placeholder="Email" />
+                </div>
+                <input type="password" name="pass" id="pass" placeholder="Contrasena" />
+                <div class="btn-input">
+                    <button id="btn-acceder" type="submit" class="primary-btn">Acceder</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="side-panel">
+        <div class="background"></div>
+        </div>
+    </section>
+
+    <!-- Scrips Firebase-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDTkyIdi5YqPninkaNWi2fypvhE48fAbCw",
+            authDomain: "altapacaya.firebaseapp.com",
+            databaseURL: "https://altapacaya-default-rtdb.firebaseio.com",
+            projectId: "altapacaya",
+            storageBucket: "altapacaya.appspot.com",
+            messagingSenderId: "246131484572",
+            appId: "1:246131484572:web:e3212586a9e5a23b710a59"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("btn-acceder").addEventListener("click", function(e){
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            window.open("/html/content/index.html", "oficial");
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+    });
+    </script>
+</body>
+</html>

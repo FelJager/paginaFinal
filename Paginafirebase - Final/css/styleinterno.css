@@ -1,0 +1,22 @@
+.fullstop {
+    color: var(--primary-color);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.circle {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 22%,
+        rgba(38, 94, 194, 1) 63%
+    );
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
